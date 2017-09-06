@@ -1,9 +1,16 @@
 <template>
     <div id="sourceSelection">
-        <h4>Select News source</h4>
-        <select class="form-control" v-on:change="sourceChanged">
-            <option :value="source.id" v-for="source in sources">{{ source.name }}</option>
-        </select>
+        <div class="jumbotron">
+            <h2><span class="glyphicon glyphicon-list-alt"></span>News List</h2>
+            <h4>Select News source</h4>
+            <select class="form-control" v-on:change="sourceChanged">
+                <option :value="source.id" v-for="source in sources">{{ source.name }}</option>
+            </select>
+            <div v-if="source">
+                <h6>{{ source.description }}</h6>
+                <a :href="source.url" class="btn btn-primary" target="_blank">Go To Website</a>
+            </div>
+        </div>        
     </div>
 </template>
 
