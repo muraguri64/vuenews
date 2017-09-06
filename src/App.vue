@@ -1,7 +1,7 @@
 <template>
   <div class="container" id="app">
-    <Sourceselection></Sourceselection>
-    <Newslist></Newslist>
+    <Sourceselection v-on:sourceChanged="sourceChanged"></Sourceselection>
+    <Newslist :source="source"></Newslist>
   </div>
 </template>
 
@@ -11,6 +11,16 @@ import Newslist from './components/newsList'
 
 export default {
   name: 'app',
+  data () {
+    return {
+      source: ""
+    }
+  },
+  methods: {
+    sourceChanged: function(source) {
+      this.source = source
+    }
+  },
   components: {
     Sourceselection,
     Newslist
