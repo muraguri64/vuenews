@@ -1,13 +1,22 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div class="container" id="app">
+    <Sourceselection></Sourceselection>
+    <Newslist></Newslist>
   </div>
 </template>
 
 <script>
+import Sourceselection from './components/sourceSelection'
+import Newslist from './components/newsList'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Sourceselection,
+    Newslist
+  }
 }
+
 </script>
 
 <style>
