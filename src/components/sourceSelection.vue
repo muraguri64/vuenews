@@ -31,7 +31,7 @@ export default {
                   this.source = this.sources[i];
               }
           }
-
+          this.$emit('sourceChanged', e.target.value);
       }
   },
   created: function () {
