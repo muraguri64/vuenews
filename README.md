@@ -1,6 +1,6 @@
 # vuenews
 
-> A Vue.js project
+> A simple news aggregation app built  using Vue.js
 
 ## Build Setup
 
